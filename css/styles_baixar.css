@@ -3,32 +3,34 @@
 }
 
 body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    overflow: hidden;
-    font-family: "Montserrat", sans-serif;
-  }
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  font-family: "Montserrat", sans-serif;
+}
 
+.header {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1px;
+  background-color: #98CEFF;
+}
 
-  .header {
-    position: absolute;
-    width: 100%;
-    top: 0;
-    z-index: 10;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 1px; /* Adjust the padding for left and right */
-    background-color: #98CEFF;
-  }
-  .nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-  }
-  .nav-item:hover{
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  z-index: 100;
+}
+
+.nav-item:hover{
     color: #013689;
   }
 
