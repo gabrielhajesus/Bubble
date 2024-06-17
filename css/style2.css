@@ -1,0 +1,212 @@
+*{
+  box-sizing: border-box;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    font-family: "Montserrat", sans-serif;
+  }
+
+
+  .header {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1px; /* Adjust the padding for left and right */
+    background-color: #98CEFF;
+  }
+  .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .nav-item:hover{
+    color: #013689;
+  }
+
+#baixar{
+    color:#013689 ;
+    text-decoration: underline;
+}
+
+#baixar:hover{
+    color: white;
+    text-decoration: underline;
+}
+    
+  .nav-item, .nav-brand {
+    /* Reduce the margin value to bring the items closer */
+    margin: 0 0.5rem; /* Adjust the left and right margin as needed */
+    text-decoration: none;
+    color: #FFFFFF; /* Adjust the color as needed */
+    font-size: 1rem; /* Adjust the font size as needed */
+  }
+
+  
+  .nav-item {
+    /* Reduce the margin value to bring the items closer */
+    margin: 0 2rem; /* Adjust the left and right margin as needed */
+    text-decoration: none;
+    color: #FFFFFF; /* Adjust the color as needed */
+    font-size: 1rem; /* Adjust the font size as needed */
+  }
+  
+  .nav-brand {
+    font-weight: bold;
+    font-size: 1.25rem; /* Adjust the font size as needed */
+    text-decoration: none;
+
+  }
+
+
+  .nav, .container, .rectangle, .inner-rectangle, .info {
+    width: 100%; /* Garante que estes elementos não ultrapassem a largura da tela */
+  }
+  
+  .nav h2{
+    text-decoration: none;
+  }
+/* Other existing styles... */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ensures container is at least as tall as the viewport */
+    position: relative;
+    background-image: linear-gradient(to bottom right, #5579FF, #00E5CD);
+  }
+  
+  .rectangle {
+    background-color: #98CEFF; /* Light blue background color */
+    border-radius: 40px 40px 0 0; /* Rounded corners at the top only */
+    padding: 20px 40px; /* Reduced top and bottom padding, adjust as needed */
+    width: 60%; /* Full width */
+    margin-top:8%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Adds subtle shadow */
+    color: #333; /* Text color inside the rectangle */
+    text-align: center; /* Center text inside the rectangle */
+    flex-grow: 1; /* Takes up the remaining space in the flex container */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    justify-content: flex-start; /* Align children to the start of the container */
+
+  }
+  
+
+.inner-rectangle {
+    background-color: #DFF7FF; /* The desired light aqua color */
+    border-radius: 20px; /* Adjust as necessary for your design */
+    padding: 30px; /* Adjust padding for spacing inside the inner rectangle */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; /* Space out the content and the button */
+
+  }
+  
+.content-wrapper {
+    display: flex;
+    margin-left: 10px;
+    justify-content: space-between; /* Puts space between text content and button */
+    align-items: center;
+    width: 100%; /* Full width of the parent container */
+  }
+  
+  /* ... rest remains the same ... */
+  
+
+  .download-button {
+    background-color: #66ACFF; /* Color of the button */
+    color: white; /* Text color inside the button */
+    padding: 10px 20px; /* Padding inside the button */
+    border: none; /* No border unless you want one */
+    padding: 20px;
+    width: 30%;
+    font-family: "Montserrat", sans-serif;
+    margin-right: 30px;
+    border-radius: 10px; /* Slightly rounded corners for the button */
+    cursor: pointer; /* Changes the cursor to signify this is a clickable button */
+    font-weight: bold; /* Makes the button text bold */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+  }
+  
+  .download-button:hover {
+    background-color: #0262AC; /* Darker shade of blue for the hover state */
+  }
+
+.info{ 
+  padding-top: 4%;
+  display: flex; /* This defines a flex container; inline or block depending on the given value */
+  justify-content: space-between; /* This defines the alignment along the main axis */
+  align-items: center; /* This defines the default behavior for how flex items are laid out along the cross axis on the current line */
+}
+
+
+  .text-info{
+    text-align: left;
+    max-width: none; /* Allows text content to take natural width */
+    font-size: 1.25rem; /* Larger font size for the Windows text */
+    color: black;
+  }
+  
+
+  .gadget-image .text-info{
+    width: 50%; /* Ensure the image doesn't exceed 50% of the container's width */
+  }
+
+.text-content a{
+  color: white;
+}
+
+
+@media (max-width: 768px) {
+
+  .body{
+    overflow: hidden;
+  }
+
+  .container, .rectangle, .inner-rectangle {
+    padding: 15px; /* Ajuste o padding se necessário */
+  }
+
+  .info, .content-wrapper {
+    flex-direction: column;
+  }
+
+  .download-button {
+    width: auto; /* Permite que o botão ajuste sua largura ao conteúdo */
+    padding: 10px 20px; /* Adequado para toque */
+  }
+
+  .text-content {
+    text-align: center;
+  }
+
+  .text-info {
+    font-size: 1rem; /* Ajuste conforme necessário para legibilidade */
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-item, .nav-brand {
+    font-size: 0.7rem;
+    padding: 5px; /* Reduzindo o padding para economizar espaço */
+  }
+
+  .body{
+    overflow: hidden;
+  }
+}
+
